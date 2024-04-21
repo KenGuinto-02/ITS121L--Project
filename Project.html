@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<title>Lily's - Main</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("wallpaper 1.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+/* Additional CSS properties */
+.w3-dropdown-hover:hover .w3-dropdown-content {
+  display: block;
+}
+
+.w3-container {
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.w3-image {
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.w3-button {
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: none;
+}
+
+.w3-button:hover {
+  background-color: #45a049;
+}
+
+.w3-input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.w3-modal-content {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.w3-modal-content .w3-button {
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: none;
+}
+
+.w3-modal-content .w3-button:hover {
+  background-color: #d32f2f;
+}
+.w3-bar {
+  background-color: #0101DF; /* Choose your desired color */
+  color: white; /* Text color for better contrast */
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Home</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">WORKS <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card">
+          <a href="Page 3.html #work" class="w3-bar-item w3-button">Work 1</a>
+          <a href="Page 4.html #work" class="w3-bar-item w3-button">Work 2</a>
+          <a href="Page 5.html #work" class="w3-bar-item w3-button">Work 3</a>
+        </div>
+      </div>
+ <a href="Page 2.html #pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>
+</div>
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+ <a href="Page 2.html #pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+<!-- Image Header -->
+<div class="w3-display-container bgimg-1" id="home">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">Lily's Guitar Maintenance</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p>Customization and Restoration Services</p>
+    <a href="#contact" class="w3-button w3-green w3-padding-large w3-large w3-margin-top">Contact Us</a>
+  </div>
+</div>
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About Us</h3>
+    <p>At Lily's Guitar Maintenance and Restoration Center, we believe that every guitar has a unique story to tell. With our passion for craftsmanship and attention to detail, we strive to bring out the best in each instrument, whether it's a vintage classic or a modern masterpiece. Our dedication to quality and customer satisfaction has earned us a reputation as a trusted partner for musicians looking to enhance their sound and preserve their musical heritage.</p>
+  </div>
+  <!-- Services Section -->
+  <div class="w3-container w3-padding-32" id="services">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Our Services</h3>
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="wallpaper 7.jpg" alt="Customization" style="width:100%" class="w3-image">
+        <h3>Customization</h3>
+        <p>Transform your guitar with personalized designs and enhancements.</p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="wallpaper 8.jpg" alt="Repair" style="width:100%" class="w3-image">
+        <h3>Repair</h3>
+        <p>Restore your guitar's functionality and playability with expert repairs.</p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="wallpaper 9.jpg" alt="Restoration" style="width:100%" class="w3-image">
+        <h3>Restoration</h3>
+        <p>Revive vintage guitars and preserve their classic beauty and tone.</p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="wallpaper 10.jpg" alt="Cleaning" style="width:100%" class="w3-image">
+        <h3>Cleaning</h3>
+        <p>Maintain the pristine look and feel of your guitar with professional cleaning services.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Gallery Section -->
+  <div class="w3-row-padding w3-padding-16" id="gallery">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Gallery</h3>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="wallpaper 2.jpg" alt="Gallery 1" style="width:100%" class="w3-image">
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="wallpaper 3.jpg" alt="Gallery 2" style="width:100%" class="w3-image">
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="wallpaper 4.jpg." alt="Gallery 3" style="width:100%" class="w3-image">
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="wallpaper 5.jpg" alt="Gallery 4" style="width:100%" class="w3-image">
+    </div>
+  </div>
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact Us</h3>
+    <p>Interested in our services? Contact us for inquiries and appointments.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+      <button class="w3-button w3-green w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  <!-- End page content -->
+</div>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by Lily's Guitar Maintenance</p>
+</footer>
+<!-- Add JavaScript for Sidebar -->
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+</body>
+</html>
